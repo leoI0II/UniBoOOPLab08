@@ -1,0 +1,12 @@
+#java
+**/*.class
+**/*.log
+
+#gradle trash
+**/.gradle/
+**/build/
+
+#vscode trash
+**/bin/
+**/.vscode/
+
