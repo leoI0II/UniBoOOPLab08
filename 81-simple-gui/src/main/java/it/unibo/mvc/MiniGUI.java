@@ -1,9 +1,11 @@
 package it.unibo.mvc;
 
+import javax.swing.BoxLayout;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import java.awt.BorderLayout;
+import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Toolkit;
 import java.awt.event.ActionEvent;
@@ -41,9 +43,15 @@ public class MiniGUI {
         write.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(final ActionEvent e) {
-                System.out.println(randomGenerator.nextInt());
+                System.out.println(randomGenerator.nextInt());      //NOPMD
             }
         });
+
+        final var newPanel = new JPanel();
+        canvas.add(newPanel);
+        final var button = new JButton("RANDOMIZE ME");
+        newPanel.add(button, BorderLayout.CENTER);
+        canvas.setBackground(Color.BLUE);
     }
 
     private void display() {
